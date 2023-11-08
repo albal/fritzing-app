@@ -43,13 +43,11 @@ jobs:
         cmake --build . -- 
     
     - name: Build Boost
-      uses: egor-tensin/build-boost@v1.4
-      with:
-        version: ${{env.BOOST_VER}}
-        platform: x64
-        configuration: Release
-        directory: ${{env.BOOST_VER}}
-
+      uses: jaxxstorm/action-install-gh-release@v1.10.0
+      with: # Grab a specific platform and/or architecture
+        repo: boostorg/boost
+        platform: windows
+      
     - name: Install Qt
       uses: jurplel/install-qt-action@v3
 
