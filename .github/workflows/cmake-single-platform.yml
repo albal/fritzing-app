@@ -27,12 +27,12 @@ jobs:
       
     - uses: actions/checkout@v3
       with:
-        repository: 'https://github.com/fritzing/fritzing-parts.git'
+        repository: 'fritzing/fritzing-parts.git'
         path: 'fritzing-parts'
 
     - uses: actions/checkout@v3
       with:
-        repository: 'https://github.com/libgit2/libgit2.git'
+        repository: 'libgit2/libgit2.git'
         path: 'libgit2'
 
     - name: Build libgit2
