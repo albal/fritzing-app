@@ -40,7 +40,7 @@ jobs:
         mkdir libgit2\build
         cd libgit2\build
         cmake -D BUILD_SHARED_LIBS=OFF ..
-        cmake --build . -- -j4
+        cmake --build . -- 
     
     - name: Build Boost
       uses: egor-tensin/build-boost@v1.4
