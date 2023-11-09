@@ -54,8 +54,8 @@ jobs:
     - name: Find file
       run: |
         cd ${{github.workspace}}
-        dir /s/b phoenix.pro
-        dir /s/b build
+        gci -recurse -filter "phoenix.pro"
+        gci -recurse -filter "Build"
 
     - name: Build
       # Build your program with the given configuration
