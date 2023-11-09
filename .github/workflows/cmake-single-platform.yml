@@ -89,7 +89,7 @@ jobs:
       # Build your program with the given configuration
       run: |
         cd ${{github.workspace}}/fritzing-app
-        msbuild fritzing.vcproj
+        msbuild Fritzing.vcxproj
         
     - name: Test
       working-directory: ${{github.workspace}}/build
