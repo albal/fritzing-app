@@ -11,7 +11,6 @@ on:
 env:
   # Customize the CMake build type here (Release, Debug, RelWithDebInfo, etc.)
   BUILD_TYPE: Release
-  BOOST_VER: '1.70.0'
 
 jobs:
   build:
@@ -51,6 +50,12 @@ jobs:
     
     - name: Install Qt
       uses: jurplel/install-qt-action@v3
+
+    - name: Find file
+      run: |
+        cd ${{github.workspace}}
+        dir /s/b phoenix.pro
+        dir /s/b build
 
     - name: Build
       # Build your program with the given configuration
