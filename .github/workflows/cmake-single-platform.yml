@@ -49,6 +49,8 @@ jobs:
         cmake -D BUILD_SHARED_LIBS=OFF ..
         cmake --build . --config Release
         cmake --build . --target install --config Release
+        mkdir ${{github.workspace}}libgit2/build64/Release
+        copy "C:/Program Files (x86)/libgit2/lib/git2.lib" libgit2/build64/Release/.
     
     - name: Install Qt
       uses: jurplel/install-qt-action@v3
