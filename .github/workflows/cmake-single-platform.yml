@@ -80,7 +80,9 @@ jobs:
         qmake.exe -t vcapp phoenix.pro
 
     - name: Show VS project
-      run: cat fritzing.vcproj
+      run: |
+        ls
+        cat fritzing.vcproj
             
     - name: Build
       # Build your program with the given configuration
