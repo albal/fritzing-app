@@ -53,7 +53,7 @@ jobs:
       with:
         repository: 'albal/ngspice'
         ref: 'ngspice-40'
-        path: 'ngspice-40'
+        path: 'ngspice'
 
     - name: Build libgit2
       run: |
