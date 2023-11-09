@@ -51,16 +51,12 @@ jobs:
     - name: Install Qt
       uses: jurplel/install-qt-action@v3
 
-    - name: Find file
-      run: |
-        cd ${{github.workspace}}
-        gci -recurse -filter "phoenix.pro"
-        gci -recurse -filter "Build"
-
     - name: Build
       # Build your program with the given configuration
       run: |
-        cd ${{github.workspace}}/build
+        cd ${{github.workspace}}/fritzing-app
+        mkdir build
+        cd ${{github.workspace}}/fritzing-app/build
         qmake ../phoenix.pro
         make -j16
 
