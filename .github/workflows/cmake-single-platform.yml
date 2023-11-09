@@ -21,6 +21,13 @@ jobs:
     runs-on: windows-latest
 
     steps:
+    - name: Install Quazip
+      run: |
+        cd ${{github.workspace}}
+        wget https://github.com/fritzing/fritzing-app/files/13224961/quazip_qt5.zip
+        7z x quazip_qt5.zip
+        ls
+    
     - name: Install boost
       uses: MarkusJx/install-boost@v2.4.4
       with:
