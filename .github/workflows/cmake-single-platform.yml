@@ -46,8 +46,8 @@ jobs:
         mkdir libgit2\build
         cd libgit2\build
         cmake -D BUILD_SHARED_LIBS=OFF ..
-        cmake --build . -- 
-        cmake --build . --target install
+        cmake --build . --config Release
+        cmake --build . --target install --config Release
     
     - name: Install Qt
       uses: jurplel/install-qt-action@v3
