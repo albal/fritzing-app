@@ -10,7 +10,7 @@ on:
 
 env:
   # Customize the CMake build type here (Release, Debug, RelWithDebInfo, etc.)
-  BUILD_TYPE: Debug
+  BUILD_TYPE: Release
 
 jobs:
   build:
@@ -47,6 +47,7 @@ jobs:
         cd libgit2\build
         cmake -D BUILD_SHARED_LIBS=OFF ..
         cmake --build . -- 
+        cmake --build . --target install
     
     - name: Install Qt
       uses: jurplel/install-qt-action@v3
