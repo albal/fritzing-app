@@ -24,7 +24,7 @@ jobs:
     - name: Install Quazip
       run: |
         cd ${{github.workspace}}
-        wget https://github.com/fritzing/fritzing-app/files/13224961/quazip_qt5.zip
+        Invoke-WebRequest -Uri https://github.com/fritzing/fritzing-app/files/13224961/quazip_qt5.zip -OutFile quazip_qt5.zip
         7z x quazip_qt5.zip
         ls
     
