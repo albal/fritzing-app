@@ -53,16 +53,21 @@ jobs:
 
     - name: setup-msbuild
       uses: microsoft/setup-msbuild@v1.3.1
+
+    - name: Convert to VS project
+      run: |
+        cd ${{github.workspace}}/fritzing-app
+        qmake.exe -t vcapp phoenix.pro
+
+    - name: Show VS project
+      run: cat fritzing.vcproj
             
     - name: Build
       # Build your program with the given configuration
       run: |
         cd ${{github.workspace}}/fritzing-app
-        mkdir build
-        cd ${{github.workspace}}/fritzing-app/build
-        qmake ../phoenix.pro
-        make -j16
-
+        msbuild fritzing.vcproj
+        
     - name: Test
       working-directory: ${{github.workspace}}/build
       # Execute tests defined by the CMake configuration.
