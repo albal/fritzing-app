@@ -11,7 +11,7 @@ on:
 env:
   # Customize the CMake build type here (Release, Debug, RelWithDebInfo, etc.)
   BUILD_TYPE: Release
-  platform_version: x86
+  PLATFORM_VERSION: x86
 
 jobs:
   build:
@@ -24,8 +24,8 @@ jobs:
     - name: Install boost
       uses: MarkusJx/install-boost@v2.4.4
       with:
-         boost_version: 1.70.0
-         boost_install_dir: ${{github.workspace}}/boost_1_70_0
+         boost_version: 1.83.0
+         boost_install_dir: ${{github.workspace}}/boost_1_83_0
          # toolset: msvc
 
     - uses: actions/checkout@v3
