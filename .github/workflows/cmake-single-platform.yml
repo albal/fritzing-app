@@ -55,7 +55,7 @@ jobs:
     - name: Build
       # Build your program with the given configuration
       run: |
-        cd ${{github.workspace}}/fritzing-app/build
+        cd ${{github.workspace}}/build
         qmake ../phoenix.pro
         make -j16
 
