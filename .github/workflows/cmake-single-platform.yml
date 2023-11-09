@@ -81,6 +81,7 @@ jobs:
 
     - name: Show VS project
       run: |
+        cd ${{github.workspace}}/fritzing-app
         ls
         cat fritzing.vcproj
             
